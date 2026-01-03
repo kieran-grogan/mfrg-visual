@@ -1,0 +1,17 @@
+# At Producer: Communication
+
+Sends automated carrier requests and SMS nudges while in the At Producer stage.
+
+## Trigger
+- **Added via workflow**: Typically from `wf-con-01-new-agent-enters-stage-no-profile`.
+
+## Logic / Steps
+1. **Submit Carrier Requests (Day 0 in S2)**: Automated email.
+2. **Wait 1 Day**
+3. **Submit Carrier Requests (Day 2 in S2 and Rotating)**: Automated email.
+4. **SMS Nudge**: Friendly reminder via SMS.
+5. **Wait (2) Days**
+6. **Go To**: Loops back to step 3 for ongoing nudges until removed.
+
+## Screenshots
+![At Producer Communication](/assets/workflows/wf-con-02-at-producer-communication.png)

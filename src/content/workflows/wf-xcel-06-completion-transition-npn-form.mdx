@@ -1,0 +1,11 @@
+## Workflow Journey
+This is the **exit gate** for the pre-licensing phase. It handles the moment an agent becomes "Official" by providing their NPN.
+
+## Step-by-Step Logic
+1. **Verification**: The agent submits the "NPN Form".
+2. **Phase Transition**: The system tags the contact as "Licensed" and prepares them for the Contracting pipeline.
+3. **Closing the Loop**: Any active XCEL reminders (the drips) are **immediately stopped** to ensure the agent doesn't get old training emails once they've passed.
+4. **The Handover**: The agent is now "pushed" into the Stage 1 Contracting audit.
+
+> [!IMPORTANT]
+> This is a critical transition. If the "Remove from Workflow" step fails, agents will continue receiving study reminders even after they are licensed.

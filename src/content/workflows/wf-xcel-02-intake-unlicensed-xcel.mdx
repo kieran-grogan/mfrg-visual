@@ -1,0 +1,22 @@
+# 1 — Intake — Unlicensed (XCEL)
+
+Standard intake for unlicensed agents, setting deadlines and starting reminders.
+
+## Trigger
+- **Form Submitted**: Primary intake form.
+
+## Logic / Steps
+1. **XCEL Stage 1**: Update stage to "Intake Started".
+2. **Enrollment Date Set**: Current date becomes the anchor for all future reminders.
+3. **30 Day Due Date Set**: The system calculates +30 days as a hard deadline for licensing.
+4. **Pre-Licensing Link for Login**: Automatic email delivery of course credentials.
+5. **Add to Workflow**: Enrolls contact into `wf-xcel-03-xcel-drip-reminders`.
+
+## Key Timing Logic
+This workflow is responsible for **anchoring the timeline**. If an agent is enrolled multiple times, their due date may reset. The 30-day window is critical for identifying "Low Intent" agents who stall in pre-licensing.
+
+## Fields
+- **Writes**: `XCEL Stage 1`, `Enrollment Date`, `30 Day Due Date`
+
+## Screenshots
+![Intake Unlicensed](/assets/workflows/wf-xcel-02-intake-unlicensed-xcel.png)

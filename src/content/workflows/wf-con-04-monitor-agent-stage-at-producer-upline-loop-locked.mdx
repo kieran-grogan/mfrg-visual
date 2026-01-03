@@ -1,0 +1,12 @@
+# 2. Monitor Agent Stage - At Producer (Upline logic)
+
+> [!WARNING]
+> This is a Legacy/Experiment version. It encountered GHL loop-lock errors. Use the published version instead.
+
+## Details
+- Encountered "Loop Locked Go To" errors (visible in red in builder).
+- Logic attempt: `Upline NPN?` check → `Validating Upline Agent’s Status`.
+- Guidance: avoid deep Go To recursion; use remove + re-enroll patterns instead.
+
+## Screenshots
+![Monitor Agent Stage Upline Logic](/assets/workflows/wf-con-04-monitor-agent-stage-at-producer-upline-loop-locked.png)

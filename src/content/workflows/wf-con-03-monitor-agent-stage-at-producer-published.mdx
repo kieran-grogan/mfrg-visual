@@ -1,0 +1,12 @@
+## Workflow Journey
+This is the **monitoring engine** for the producer phase. It effectively "watches" the agent as they work on their carrier appointments.
+
+## Step-by-Step Logic
+1. **The Polling Loop**: Because GHL doesn't always know when SureLC updates, this workflow checks for changes every 24 hours.
+2. **Progress Audit**: It asks: "Has this agent moved forward in their appointments?"
+3. **Routing the Move**:
+   - If they have reached the **BGA Stage**, they are moved to a new pipeline stage and enrolled in BGA-specific reminders.
+   - If they have reached **Carrier Published**, they are celebrated as fully appointed.
+
+> [!TIP]
+> This workflow uses a "Self-Re-enrollment" pattern. If the agent hasn't moved yet, the system waits a day, removes them, and adds them back to start the check again.

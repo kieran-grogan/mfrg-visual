@@ -1,0 +1,15 @@
+# BGA Reminders (Quility) * Review for Upline Logic
+
+Sends reminders for Quility BGA tasks, similar logic to Equita reminders.
+
+## Trigger
+- **Added via workflow**: From monitoring workflows.
+
+## Logic / Steps
+1. **#1 Stage 3 Monitor Stage Level for Pipeline Movement**: API call.
+2. **Send Reminder Pre-Req Met?**: Condition check.
+   - **None**: `Wait (2) Days` → `Go To` (loop).
+   - **Yes**: Sends `Quility - Email Reminder` (details similar to Equita).
+
+## Screenshots
+![BGA Reminders Quility](/assets/workflows/wf-con-08-bga-reminders-quility.png)

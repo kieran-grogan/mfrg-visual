@@ -1,0 +1,23 @@
+# How to Update Documentation
+
+This site is powered by Next.js and MDX. Content is managed via Markdown files in `src/content/`.
+
+## How to add a new workflow
+1. Create a new `.mdx` file in `src/content/workflows/`.
+2. Add the workflow metadata to `data/workflows.ts`.
+3. (Optional) Add a screenshot to `public/assets/workflows/`.
+
+## How to add a new screenshot
+1. Add the image file to `public/assets/workflows/`.
+2. Reference the exact filename in the `screenshots` array in `data/workflows.ts`.
+3. Use standard markdown syntax to embed it in the MDX: `![Alt Text](/assets/workflows/filename.png)`.
+
+## How to update field mappings
+1. Open `data/fields.ts`.
+2. Update the `fields` array with new confirmed or observed fields.
+3. Update specific workflow MDX files to reflect changes in "Reads" or "Writes" logic.
+
+## How to deploy
+- This project is a standard Next.js app. 
+- Run `npm run build` to verify the build.
+- Push to your git provider (e.g., GitHub) and connect to Vercel or similar for automatic deployment.

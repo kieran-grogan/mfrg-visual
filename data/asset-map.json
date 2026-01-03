@@ -1,0 +1,22 @@
+{
+    "1.png": "wf-root-automation-list.png",
+    "2.png": "wf-folder-xcel-onboarding.png",
+    "3.png": "wf-folder-contracting-p1.png",
+    "4.png": "wf-folder-contracting-p2.png",
+    "2.1.png": "wf-xcel-01-passed-test-trigger-link.png",
+    "2.2.png": "wf-xcel-02-intake-unlicensed-xcel.png",
+    "2.3.png": "wf-xcel-03-xcel-drip-reminders.png",
+    "2.4.png": "wf-xcel-04-on-logged-in-trigger-link.png",
+    "2.5.png": "wf-xcel-05-on-purchased-accessed-trigger-link.png",
+    "2.6.png": "wf-xcel-06-completion-transition-npn-form.png",
+    "1.1.png": "wf-con-01-new-agent-enters-stage-no-profile.png",
+    "1.2.png": "wf-con-03-monitor-agent-stage-at-producer-published.png",
+    "1.2v2.png": "wf-con-04-monitor-agent-stage-at-producer-upline-loop-locked.png",
+    "1.3.png": "wf-con-06-monitor-bga-to-carrier-stage.png",
+    "1.4.png": "wf-con-02-at-producer-communication.png",
+    "1.5.png": "wf-con-09-licensed-intake-profile-stage.png",
+    "1.6.png": "wf-con-10-surelc-granular-audit.png",
+    "1.7.png": "wf-con-07-bga-reminders-equita.png",
+    "1.8.png": "wf-con-08-bga-reminders-quility.png",
+    "1.9.png": "wf-con-05-new-bga-monitor-agent-stage-at-producer-draft.png"
+}

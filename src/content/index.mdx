@@ -1,0 +1,26 @@
+# GHL XCEL + Contracting Interactive Guide
+
+Welcome to the internal build guide for the GHL XCEL and Contracting automation system. This tool is designed to help VAs and Admins understand, troubleshoot, and maintain the complex logic that moves agents from pre-licensing to active contracting.
+
+## How the system works
+
+The system is split into two major phases, connected by a handover trigger:
+
+### Phase 1: XCEL Onboarding (Pre-Licensing)
+Agents start here if they are unlicensed. The system uses **automated drip reminders** to ensure they complete their courses. Once they pass their test and submit their NPN, they are automatically moved to Phase 2.
+
+### Phase 2: Contracting Pipeline
+Once an agent is licensed, the system audits their profile via **SureLC API integrations**. It monitors their progress through three key stages:
+1. **No Profile**: Verifying the agent exists in SureLC.
+2. **At Producer**: Monitoring carrier appointment requests.
+3. **BGA/Carrier**: Finalizing appointment status.
+
+## Key Sections
+
+- **[Interactive Journey Map](/journey)**: A bird's-eye view of the entire agent journey.
+- **[Workflows Index](/workflows)**: Searchable list of every automation canvas.
+- **[Custom Field Map](/fields)**: Documentation of all data points.
+- **[Troubleshooting Runbook](/troubleshooting)**: Checklists for stuck agents.
+
+## Maintenance
+Need to add a new workflow or update logic? See the **[Maintenance Guide](/how-to-update)**.

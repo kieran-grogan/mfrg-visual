@@ -1,0 +1,21 @@
+# Troubleshooting Runbook
+
+Use this guide to resolve common "stuck" cases in the XCEL and Contracting pipelines.
+
+## "No Profile" Stuck Case
+If an agent is stuck in the **No Profile** stage:
+1. **Check Onboarding | NPN**: Verify the NPN field is populated.
+2. **Check SureLC Profile**: Verify the producer exists in SureLC using the NPN.
+3. **Verify Workflow Enrollment**: Ensure the agent is enrolled in `1. New Agent Enters Stage - No Profile`.
+
+## "At Producer" Stuck Case
+If an agent is stuck in the **At Producer** stage:
+1. **Verify Stage Selection API**: Check if the monitoring workflow is successfully calling the API.
+2. **Check API Outputs**: Look at the `highestStage` output to see if it matches expected movement criteria.
+3. **Loop Logic**: Ensure the agent is being re-enrolled for polling if the state is "None".
+
+## "Loop Locked" Guidance
+GHL sometimes locks workflows that have deep manual recursion (Go To).
+- **Symptom**: Red error bars in the builder or agents failing to move.
+- **Fix**: Replace deep `Go To` loops with a **Remove from Workflow** + **Add to Workflow** pattern.
+- **Reference**: See `wf-con-04-monitor-agent-stage-at-producer-upline-loop-locked` for an example of what to avoid.

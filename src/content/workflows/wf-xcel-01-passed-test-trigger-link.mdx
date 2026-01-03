@@ -1,0 +1,19 @@
+# "Passed Test" Trigger Link
+
+Updates contact stage to XCEL Completed and cleans up drip workflows after a test is passed.
+
+## Trigger
+- Trigger link **"Passed"**
+
+## Logic / Steps
+1. **XCEL Completed Stage**: Update field/stage.
+2. **Remove from Drip Workflows**: Removes contact from `wf-xcel-03-xcel-drip-reminders`.
+3. **Wait (2) Days**
+4. **Email**: Sends congratulatory email.
+5. **Go To**: Internal loop or redirect logic.
+
+## Fields
+- **Writes**: `XCEL Completed Stage`
+
+## Screenshots
+![Passed Test Trigger Link](/assets/workflows/wf-xcel-01-passed-test-trigger-link.png)

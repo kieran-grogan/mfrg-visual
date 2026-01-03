@@ -1,0 +1,17 @@
+# BGA Reminders (Equita) ** Review for Upline Logic
+
+Sends reminders for Equita BGA tasks, depends on Upline NPN check.
+
+## Trigger
+- **Added via workflow**: From monitoring workflows.
+
+## Logic / Steps
+1. **#1 Stage 3 Monitor Stage Level for Pipeline Movement**: API call.
+2. **Send Reminder Pre-Req Met?**: Condition check.
+   - **None**: `Wait (2) Days` → `Go To` (loop).
+   - **Yes**: `#1 Stage Check Upline via Upline NPN` → `Send Reminder Pre-Req Met?` again.
+     - **Yes**: `Equita - Email to Niki Heisler` → `Wait (2) Days` → `Go To` (loop).
+     - **None**: `Wait 1 Day` → `Go To` (loop).
+
+## Screenshots
+![BGA Reminders Equita](/assets/workflows/wf-con-07-bga-reminders-equita.png)

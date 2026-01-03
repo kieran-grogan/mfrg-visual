@@ -1,0 +1,19 @@
+# 3. Monitor BGA → Carrier Stage
+
+Monitors movement from BGA stage to final Carrier stage.
+
+## Trigger
+- **Added via workflow**: Typically from `wf-con-03` or `wf-con-05`.
+
+## Logic / Steps
+1. **#1 Stage 2 Monitor Stage Level for Pipeline Movement**: API call.
+2. **Stage Selection from API Call**:
+   - **Move to Carrier**:
+     - `Remove from Workflow`
+     - `Move to Carrier Stage`
+   - **None**:
+     - `Wait (1) Day`
+     - `Go To` (loop back to poll again).
+
+## Screenshots
+![Monitor BGA Carrier](/assets/workflows/wf-con-06-monitor-bga-to-carrier-stage.png)

@@ -1,0 +1,13 @@
+## Workflow Journey
+This is the **Deep Audit** tool. It generates the detailed reports used to send specific reminders to Equita and Quility agencies.
+
+## Step-by-Step Logic
+1. **The Investigation**: The system performs a detailed scan of all current appointments across multiple carriers.
+2. **Actionable Detection**: It specifically looks for appointments that are "Stuck" but can be fixed by the agent (e.g. missing signature).
+3. **BGA Routing**: 
+   - If the agent is primarily with **Equita**, it sends an alert to Niki.
+   - If they are with **Quility**, it sends the Quility-specific reminder sequence.
+4. **Intelligence Flags**: It sets flags like `has_actionable` to tell other workflows whether they need to intervene.
+
+> [!IMPORTANT]
+> This workflow depends on valid Bearer Tokens. If the reports stop sending, the API credentials likely need to be refreshed.

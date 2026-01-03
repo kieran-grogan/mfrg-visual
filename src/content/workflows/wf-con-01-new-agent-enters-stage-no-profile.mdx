@@ -1,0 +1,13 @@
+## Workflow Journey
+This workflow acts as the **primary gatekeeper** for the entire contracting system. It ensures that only agents with a verified NPN (National Producer Number) can proceed to the next stages.
+
+## Step-by-Step Logic
+1. **Verify Identification**: The system double-checks that the agent has provided a valid NPN.
+2. **SureLC Integration**: An automated request is sent to SureLC to see if a producer profile already exists for this NPN.
+3. **Identity Branching**:
+   - If a profile is found, the system immediately pulls in their compensation levels and upline information.
+   - If no profile is found, the system will wait 24 hours and try again, keeping the agent in a "Holding" pattern.
+4. **Successful Transition**: Once verified, the agent is tagged with their Upline data and moved forward to the **At Producer** stage for carrier appointments.
+
+> [!TIP]
+> This is a high-traffic workflow. Most "stuck" agents are here because their NPN is missing or incorrect.
