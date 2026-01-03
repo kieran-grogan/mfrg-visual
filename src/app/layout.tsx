@@ -18,11 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${inter.className} antialiased h-full flex overflow-hidden bg-slate-50`}
+        className={`${inter.className} antialiased min-h-full flex flex-col lg:flex-row bg-[var(--background)] transition-colors`}
       >
         <Sidebar />
-        <main className="flex-1 h-full overflow-y-auto overflow-x-hidden">
-          <div className="max-w-5xl mx-auto py-10 px-8">
+        <main className="flex-1 min-w-0">
+          <div className="max-w-5xl mx-auto py-6 px-4 sm:px-8 lg:py-12">
             {children}
           </div>
         </main>
