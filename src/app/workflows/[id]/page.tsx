@@ -56,7 +56,7 @@ export default async function WorkflowDetailPage({ params }: { params: Promise<{
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-8 space-y-12">
-                    <section className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50">
+                    <section className="bg-[var(--card-bg)] p-10 rounded-[2rem] border border-[var(--card-border)] shadow-xl shadow-slate-900/10 transition-colors">
                         <div className="prose prose-slate max-w-none prose-headings:scroll-mt-20">
                             <Content />
                         </div>

@@ -1,41 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #0f172a;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0f172a;
     --foreground: #f8fafc;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --card-bg: #1e293b;
+    --card-border: #334155;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
 }
 
 .prose {
   max-width: 80ch;
-  color: #334155;
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
 .prose h1,
 .prose h2,
 .prose h3 {
-  @apply text-slate-900 font-bold tracking-tight;
+  color: var(--text-primary);
+  @apply font-bold tracking-tight;
 }
 
 .prose h1 {
@@ -43,7 +45,8 @@ body {
 }
 
 .prose h2 {
-  @apply text-xl mt-12 mb-6 border-b border-slate-100 pb-2 flex items-center gap-2;
+  @apply text-xl mt-12 mb-6 border-b pb-2 flex items-center gap-2;
+  border-color: var(--card-border);
 }
 
 .prose h3 {
@@ -51,11 +54,12 @@ body {
 }
 
 .prose p {
-  @apply mb-5 leading-relaxed text-slate-600;
+  @apply mb-5 leading-relaxed;
 }
 
 .prose strong {
-  @apply font-bold text-slate-900;
+  color: var(--text-primary);
+  @apply font-bold;
 }
 
 /* Custom Step List */
@@ -65,25 +69,29 @@ body {
 }
 
 .prose ol>li {
-  @apply relative pl-12 py-4 bg-white border border-slate-100 rounded-xl shadow-sm transition-all hover:border-blue-200 hover:shadow-md;
+  @apply relative pl-12 py-5 border rounded-2xl shadow-sm transition-all;
+  background: var(--card-bg);
+  border-color: var(--card-border);
   counter-increment: step-counter;
 }
 
 .prose ol>li::before {
   content: counter(step-counter);
-  @apply absolute left-4 top-4 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold;
+  @apply absolute left-4 top-5 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold;
 }
 
 .prose ul {
-  @apply list-disc pl-6 mb-6 space-y-2 text-slate-600;
+  @apply list-disc pl-6 mb-6 space-y-2;
 }
 
 .prose blockquote {
-  @apply border-l-4 border-blue-500 pl-6 py-4 bg-blue-50/50 rounded-r-2xl italic mb-8 mx-0;
+  @apply border-l-4 border-blue-500 pl-6 py-4 bg-blue-500/10 rounded-r-2xl italic mb-8 mx-0;
+  color: var(--text-primary);
 }
 
 .prose hr {
-  @apply border-slate-100 my-10;
+  @apply my-10;
+  border-color: var(--card-border);
 }
 
 /* Scrollbar styling */
